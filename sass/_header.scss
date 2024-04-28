@@ -1,0 +1,134 @@
+//@use './fonts';
+$f1:"Sacramento", cursive;
+$f2:"Raleway", sans-serif;
+#header{
+    height: 10vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+
+}
+.layer{
+    width: 95%;
+    //background-color: #b8b8b802;
+    height: 70%;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(168, 168, 168, 0.336);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    .logo{
+        font-family: $f1;
+        margin: 0 5%;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        font-size: 4vmax;
+        
+    }
+    img{
+        width: 5vmax;
+        margin: 0 5%;
+        transform: rotateY(180deg);
+    }
+}
+
+.menubox{
+    img{
+        width: 5vmax;
+        position: relative;
+        top: -10%;
+        right: -20%;
+    }
+    position: absolute;
+    right: -10vmin;
+    top: -10vmin;
+    width: 10px;
+    height: 10px;
+    z-index: -2;
+    background: #000;
+    transition: all ease 0.3s;
+    a{
+        display: none;
+    }
+
+}
+.do{
+    width: 90vw;
+    top: 0;
+    height: 70vh;
+    z-index: 2;
+    right: 0;
+    border-radius: 0px 0 0 40pc ;
+    background: #a89191;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a{
+        //display: block;
+        display: inline ;
+        text-decoration: none;
+        font-size: 5vmax;
+        font-family: $f2;
+        margin-bottom: 5%;
+        color: #000;
+        transition: all ease 0.3s;
+        padding-left: 1%;
+        width: 60%;
+    }
+    a:hover{
+       font-style: italic;
+       background-color: #000000;
+       color: white;
+       border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .menubox{
+        img{
+            width: 4vmax;
+            top: -10%;
+            right: -15%;
+        }
+    }
+    .layer{
+     width: 70%;
+    }
+    
+    .do{
+     width: 65vw;
+     height: 90vh;
+     border-radius: 0px 0 0 60pc ;
+     a{
+         font-size: 4vmax;
+         text-align: right;
+         width: 30%;
+     }
+    }
+   }
+
+@media only screen and (min-width: 1200px) {
+    .menubox{
+        img{
+            width: 3vmax;
+            right: -200px;
+        }
+    }
+   .layer{
+    width: 70%;
+   }
+   
+   .do{
+    width: 40vw;
+    height: 100vh;
+    border-radius: 0px 0 0 80pc ;
+    a{
+        font-size: 3vmax;
+        text-align: right;
+        width: 30%;
+    }
+   }
+  }

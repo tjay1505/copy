@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sass/index.css">
+</head>
+<body class="gradient-background" >
+
+    <div id="menuboxs" class="menubox do" >
+        <img src="./icons/close.png" alt="" onclick="openMenu()" >
+        <a href="#" onclick="openMenu()" >Home</a>
+        <a href="#" onclick="openMenu()" >skills</a>
+        <a href="#" onclick="openMenu()" >projects</a>
+        <a href="#" onclick="openMenu()" >contact</a>
+    </div>
+
+    <header id="header" >
+        <div class="layer">
+            <div class="logo"> Jk portfolio </div>
+            <img src="./icons/menu.png" onclick="openMenu()" alt="">
+        </div>
+    </header>
+
+    <div class="landing-page">
+
+    </div>
+
+
+    <div class="dum" style="height: 100vh;" ></div>
+
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        const menubox = document.getElementById('menuboxs')
+        function openMenu(){
+            menubox.classList.toggle('do')
+        }
+    </script>
+</body>
+</html>

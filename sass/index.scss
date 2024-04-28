@@ -1,0 +1,35 @@
+@use "./header";
+@use './fonts';
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.gradient-background {
+    background: linear-gradient(63deg,#c1e09a,#5c9267,#af5d59,#9b472c,#2955ae);
+    background-size: 300% 150%;
+    animation: gradient-animation 5s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+body{
+    height: max-content;
+}
+
+.landing-page{
+    height: 100vh;
+}
+
