@@ -40,6 +40,7 @@ $f2:"Raleway", sans-serif;
         position: relative;
         top: -10%;
         right: -20%;
+        display: none;
     }
     position: absolute;
     right: -10vmin;
@@ -58,6 +59,9 @@ $f2:"Raleway", sans-serif;
     width: 90vw;
     top: 0;
     height: 70vh;
+    img{
+        display: block;
+    }
     z-index: 2;
     right: 0;
     border-radius: 0px 0 0 40pc ;

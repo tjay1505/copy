@@ -45,6 +45,7 @@
   position: relative;
   top: -10%;
   right: -20%;
+  display: none;
 }
 .menubox a {
   display: none;
@@ -62,6 +63,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.do img {
+  display: block;
 }
 .do a {
   display: inline;
@@ -145,8 +149,6 @@
 body {
   height: -moz-max-content;
   height: max-content;
-  width: 100vw;
-  overflow: hidden;
 }
 
 .landing-page {
