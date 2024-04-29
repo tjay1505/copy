@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +15,8 @@
     <link rel="stylesheet" href="./sass/index.css">
 </head>
 <body class="gradient-background" >
+
+    <a href=""></a>
 
     <div id="menuboxs" class="menubox" >
         <img src="./icons/close.png" alt="" onclick="openMenu()" >
@@ -29,19 +34,83 @@
     </header>
 
     <div class="landing-page">
-
+        <img class="landImg" src="./images/3d.png" alt="">
+        <div class="land-text">
+            <div class="textBox">
+                <p class="text">
+                <span class="text__first">
+                  <span class="text__word str">Hello ! </span>
+                  <span class="text__first-bg "></span>
+                </span>
+                <br/>
+                <span class="text__second">
+                  <span class="text__word str">A passionate,</span>
+                  <span class="text__second-bg"></span>
+                </span>
+                </p>
+                <p class="text">
+                    <span class="text__first">
+                      <span class="text__word-2 str">frontEnd</span>
+                      <span class="text__first-bg-2"></span>
+                    </span>
+                    <br/>
+                    <span class="text__second">
+                      <span class="text__word-2 str">Developer</span>
+                      <span class="text__second-bg-2"></span>
+                    </span>
+                 </p>
+    
+            </div>
+        </div>
     </div>
 
 
-    <div class="dum" style="height: 100vh;" ></div>
+    <div class="dum" style="height: 100vh;" >
+        <input type="file">
+    </div>
 
     
     <script>
         gsap.registerPlugin(ScrollTrigger)
+
+        //const ladimg = document.getElementsByClassName('landImg')
+        gsap.to(".landImg",{
+            skewX:10,
+            skewY:10,
+            repeat:-1
+
+        })
+
         const menubox = document.getElementById('menuboxs')
         function openMenu(){
             menubox.classList.toggle('do')
         }
+        
+    window.onload = function(){
+        var tl = gsap.timeline(),
+          firstBg = document.querySelectorAll('.text__first-bg'),
+          secBg = document.querySelectorAll('.text__second-bg'),
+          word  = document.querySelectorAll('.text__word');
+
+        tl
+          .to(firstBg, 0.5, {scaleX:1.1})
+          .to(secBg, 0.5, {scaleX:1.1},"-=0.8")
+          .to(word, 0.1, {opacity:1}, "-=0.2")
+          .to(firstBg, 0.3, {scaleX:0})
+          .to(secBg, 0.2, {scaleX:0});
+
+         let firstBg2 = document.querySelectorAll('.text__first-bg-2'),
+          secBg2 = document.querySelectorAll('.text__second-bg-2'),
+          word2 = document.querySelectorAll('.text__word-2');
+
+          tl
+          .to(firstBg2, 0.5, {scaleX:1.1},"+=0.5")
+          .to(secBg2, 0.5, {scaleX:1.1},"-=0.5")
+          .to(word2, 0.1, {opacity:1}, "-=0.1")
+          .to(firstBg2, 0.3, {scaleX:0})
+          .to(secBg2, 0.2, {scaleX:0})
+
+      }
     </script>
 </body>
 </html>

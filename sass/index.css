@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap");
 #header {
   height: 10vh;
   width: 100vw;
@@ -124,6 +123,109 @@
     width: 30%;
   }
 }
+.landing-page {
+  height: 100vh;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: start;
+}
+.landing-page img {
+  width: 85%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.landing-page .land-text {
+  width: 95%;
+  font-size: 4vmax;
+  font-family: "Alegreya Sans SC", sans-serif;
+  height: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.textBox {
+  width: 70vmin;
+  height: 70vmin;
+  background-color: rgba(160, 160, 160, 0.24);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 5ms;
+  animation: shapeSwift infinite 6s;
+}
+
+@keyframes shapeSwift {
+  0% {
+    border-radius: 0;
+  }
+  20% {
+    width: 90vmin;
+    border-radius: 0%;
+  }
+  40% {
+    width: 70vmin;
+    border-radius: 0%;
+  }
+  60% {
+    width: 70vmin;
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 50% 0 50% 0;
+  }
+  100% {
+    border-radius: 0 50% 0 50%;
+  }
+}
+.text {
+  display: inline-block;
+  font-size: 2.5rem;
+  line-height: 1.205;
+}
+
+.text__first, .text__second {
+  position: relative;
+}
+
+.text__word, .text__word-2 {
+  opacity: 0;
+  color: transparent;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.text__first-bg, .text__second-bg, .text__first-bg-2, .text__second-bg-2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.text__first-bg {
+  background-color: #5fbff9;
+}
+
+.text__second-bg {
+  background-color: #f06543;
+}
+
+.text__first-bg-2 {
+  background-color: rgb(233, 67, 255);
+}
+
+.text__second-bg-2 {
+  background-color: rgb(211, 67, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -149,8 +251,4 @@
 body {
   height: -moz-max-content;
   height: max-content;
-}
-
-.landing-page {
-  height: 100vh;
 }/*# sourceMappingURL=index.css.map */

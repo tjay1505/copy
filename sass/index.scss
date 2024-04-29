@@ -1,5 +1,5 @@
 @use "./header";
-@use './fonts';
+@use './landing';
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +30,5 @@ body{
     
 }
 
-.landing-page{
-    height: 100vh;
-}
+
 
